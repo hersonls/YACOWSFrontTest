@@ -1,0 +1,233 @@
+//
+//
+//
+
+#main-slider-wrapper {
+    padding-bottom: 53px;
+
+    #main-slider {
+        background: url(/static/imgs/bg_slider_top.gif) repeat-x left top;
+        padding-top: 35px;
+
+        .carousel-inner {
+            float: right;
+            width: 660px;
+            margin-left: -200px;
+
+            > .item {
+                height: 290px;
+
+                > img,
+                > a > img {
+                  display: block;
+                  float: right;
+                  width: 440px;
+                  height: 287px;
+                }
+            }
+
+            // Habilitando efeito fading
+            .item {
+                opacity: 0;
+                -webkit-transition-property: opacity;
+                -moz-transition-property: opacity;
+                -o-transition-property: opacity;
+                transition-property: opacity;
+            }
+
+            .active {
+                opacity: 1;
+            }
+
+            .active.left,
+            .active.right {
+                left: 0;
+                opacity: 0;
+                z-index: 1;
+            }
+
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+        }
+        
+        .carousel-caption {
+          position: absolute;
+          left: 0;
+          bottom: 9px;
+          width: 410px;
+          height: 38px;
+          padding: 10px;
+          background: #666666;
+          z-index: 99999;
+        }
+        
+        .carousel-caption p {
+          padding: 0;
+          margin: 0;
+          text-transform: uppercase; 
+        }
+        
+        .carousel-control {
+            z-index: 2;
+        }
+
+        .carousel-indicators {
+            position: relative;
+            float: left;
+            top: 0;
+            left: 0;
+            width: 200px;
+            z-index: 5;
+            margin: 0 -200px 0 0;
+            padding-top: 80px;
+            list-style: none;
+
+            li {
+                display: block;
+                float: left;
+                width: 195px;
+                height: 16px;
+                padding: 0 5px 2px 0;
+                margin: 0 0 10px;
+                text-indent: 0;
+                text-align: right;
+                border-radius: 0;
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: #666666;
+
+                &:first-child {
+                    width: 278px;
+                    margin-top: -119px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .active {
+                background: none;
+            }
+
+            .active:not(:first-child) {
+                position: relative;
+                background-color: #006699;
+                color: #fff;
+
+                &:after{
+                    position: absolute;
+                    right: -10px;
+                    content:"";
+                    width:0;
+                    height:0;
+                    border-top: 9px solid transparent;
+                    border-bottom: 9px solid transparent;
+                    border-left: 10px solid #006699;
+                }
+            }
+        }
+    }
+}
+
+.content-cycle {
+    header {
+        h2 {
+            font-size: 22px;
+            text-transform: uppercase;
+            color: #006699;
+
+            span {
+                font-weight: 300;
+                color: #666;
+            }
+        }
+    }
+
+    .carousel {
+        position: relative;
+        width: 660px;
+        height: 270px;
+
+        .carousel-inner {
+            float: left;
+            width: 596px;
+
+            .item {
+                width: 596px;
+                height: 270px;
+
+                .group-item {
+                    float: left;
+                    width: (596/3) - 20px;
+                    padding: 0 10px;
+
+                    .category {
+                        position: relative;
+                        width: 147px;
+                        height: 21px;
+                        padding: 2px 5px 0;
+                        margin: -10px 0 0 10px;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #666666;
+                        text-align: right;
+                        text-transform: uppercase;
+                        color: #fff;
+                        z-index: 9;
+                    }
+
+                    h3 {
+                        font-size: 16px;
+                        margin: 0;
+                        color: #006699;
+                    }
+
+                    p {
+                        font-size: 11px;
+                        line-height: 16px;
+                        color: #666;
+                    }
+
+                    &:first-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .carousel-control {
+            position: relative;
+            float: left;
+            left: 0;
+            top: 0;
+            width: 0px;
+            height: 0px;
+            margin-top: 58px;
+            font-size: 14px;
+            line-height: 30px;
+            background: none;
+            .border-radius(0);
+            opacity: 1;
+            filter: alpha(opacity=1);
+
+            content:"";
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 10px solid #d9d9d9;
+
+            &.right {
+                float: right;
+                left: auto;
+                right: 15px;
+                border-top: 25px solid transparent;
+                border-bottom: 25px solid transparent;
+                border-right: 25px solid transparent;
+                border-left: 10px solid #d9d9d9;
+            }
+        }
+    }
+}
