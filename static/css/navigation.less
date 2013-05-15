@@ -1,0 +1,86 @@
+//
+//  Navigaton
+//
+
+.main-nav {
+    height: 47px;
+    padding: 20px 0 0 15px;
+
+    a {
+        padding-right: 30px;
+        text-transform: uppercase;
+    }
+
+    .socials {
+        .btn-social {
+            float: left;
+            display: block;
+            width: 16px;
+            height: 21px;
+            padding: 0 0 0 5px;
+            margin-right: 5px;
+            border-left: 1px solid #999;
+            background: ~"url(@{static-url-prefix}imgs/socials_sprite.gif)" no-repeat 5px top;
+            text-indent: -999em;
+            overflow: hidden;
+
+            &.btn-twitter {
+                background-position: right top;
+            }
+        }
+    }
+}
+
+.section-nav {
+    margin-bottom: 50px;
+
+    header {
+        height: 27px;
+        background: #ededed;
+        
+        h2 {
+            padding: 2px 30px 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #006666;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+    }
+    
+    ul {
+        padding: 10px 0 0 20px;
+
+        li {
+            a {
+                color: @defaultGrey;
+                font-size: 12px;
+                text-transform: uppercase;
+
+            }
+
+
+            &.red {
+                color: #d61920;
+
+                a {
+                    color: #d61920;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.footer-nav {
+    float: left;
+    text-align: center;
+
+    a {
+        color: #990000;
+        margin-right: 25px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

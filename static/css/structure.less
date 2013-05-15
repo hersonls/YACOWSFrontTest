@@ -1,5 +1,5 @@
 //
-//
+// Base structure
 //
 
 .logo {
@@ -8,96 +8,121 @@
     padding: 0;
 }
 
-.ad-728x90 {
-    float: right;
-    margin-top: 8px;
-    width: 728px;
-    height: 90px;
-    border: 6px solid #cccccc;
+.right-col {
+    min-height: 500px;
+    background: ~"url(@{static-url-prefix}imgs/bg_right_col.png)" no-repeat left top;
 }
 
-.main-nav {
-    height: 47px;
-    padding: 20px 0 0 15px;
+.box-yellow {
+    padding-bottom: 100px;
 
-    a {
-        padding-right: 30px;
-        text-transform: uppercase;
+    header {
+        padding-bottom: 10px;
+        background: ~"url(@{static-url-prefix}imgs/bg_dash_yellow.gif)" repeat-x left top;
+        
+        h2 {
+            display: inline;
+            padding-right: 10px;
+            font-size: 22px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: @defaultYellow;
+            background: @white;
+        }
     }
 
-    .socials {
-        .btn-social {
-            float: left;
-            display: block;
-            width: 16px;
-            height: 21px;
-            padding: 0 0 0 5px;
-            margin-right: 5px;
-            border-left: 1px solid #999;
-            background: url(/static/imgs/socials_sprite.gif) no-repeat 5px top;
-            text-indent: -999em;
-            overflow: hidden;
+    footer {
+        background: #e5e5e5;
+        text-align: center;
 
-            &.btn-twitter {
-                background-position: right top;
+        .btn-more {
+            display: block;
+            padding: 2px;
+            color: @defaultYellow;
+            font-size: 12px;
+        }
+    }
+}
+
+.list-colored {
+    li {
+        padding: 0 5px;
+
+        &:nth-child(odd) {
+            background: #e5e5e5;    
+        }  
+
+        a {
+            color: @defaultGrey;
+            font-size: 12px;
+
+            span {
+                font-size: 11px;
+                color: #b1b1b1;
             }
         }
     }
 }
 
-.right-col {
-    min-height: 500px;
-    background: url(/static/imgs/bg_right_col.png) no-repeat left top;
-}
+.side-box {
+    margin-bottom: 20px;
 
-.search {
-    padding: 20px 30px 0;
-
-    #search-form {
-        input[type="text"] {
-            float: left;
-            padding: 5px;
-            height: 11px;
-            border: 1px solid #999999;
-            background: #fff;
-
-            .border-radius(0);
-        }
-
-        button {
-            border: none;
-            background: none;
-            color: @defaultGrey;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-    }
-}
-
-.section-nav {
     header {
-        height: 27px;
-        background: #ededed;
-        
         h2 {
-            padding: 2px 30px 0;
-            margin: 0;
             font-size: 16px;
-            font-weight: 700;
-            color: #006666;
-            line-height: 22px;
+            padding: 0;
+            margin: 0;
+            line-height: 18px;
+            color: #008267;
             text-transform: uppercase;
         }
     }
-    
-    ul {
-        padding: 10px 0 0 20px;
 
-        li a {
-            color: @defaultGrey;
+    &.box-gray {
+        .box-content {
+            padding: 5px 20px;
+            background: #e6e6e6;
+
+            h3 {
+                margin: 0;
+                font-size: 12px;
+                line-height: 22px;
+                color: #373737;
+            }
+        }
+    }
+
+    footer {
+        padding: 0 20px;
+        text-align: right;
+        font-size: 12px;
+        color: #919191;
+
+        a {
+            
+            color: #919191;
+        }
+    }
+}
+
+.main-footer {
+    text-align: center;
+    min-height: 100px;
+    padding: 20px 0;
+    background: ~"url(@{static-url-prefix}imgs/bg_main_footer.jpg)" no-repeat center top;
+
+    .nav-form-wrapper {
+        display: inline-block;
+        text-align: left;
+        padding-bottom: 20px;
+    }   
+
+    .footer-content {
+        p {
             font-size: 12px;
-            text-transform: uppercase;
+            line-height: 18px;
+            color: @defaultGrey;
+            margin: 0;
         }
     }
 }

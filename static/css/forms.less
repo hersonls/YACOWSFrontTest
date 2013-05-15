@@ -1,0 +1,90 @@
+//
+// Forms
+//
+
+.poll-form {
+    p {
+        margin: 0;
+        padding: 0;
+
+        &:nth-child(even) {
+            label {
+                color: #a8a8a8;
+            }
+        }
+    }
+
+    input {
+        float: left;
+        margin-right: 5px;
+    }
+
+    label {
+        padding-top: 3px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #464646;
+    }
+
+    button {
+        float: right;
+        border: none;
+        background: none;
+        color: #cf0000;
+    }
+}
+
+#search-form {
+    input[type="text"] {
+        float: left;
+        padding: 5px;
+        height: 11px;
+        border: 1px solid #999;
+        background: @white;
+
+        .border-radius(0);
+    }
+
+    button {
+        border: none;
+        background: none;
+        color: @defaultGrey;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.newsletter-form {
+    float: left;
+
+    p {
+        float: left;
+        padding: 2px 5px 0;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    input {
+        float: left;
+        height: 16px;
+        width: 68px;
+        margin-right: 5px;
+        padding: 2px 5px;
+        color: #cccccc;
+        border: 1px solid #999;
+
+        .border-radius(0);
+    }
+
+    button {
+        float: left;
+        background: none;
+        padding: 1px 0 0 0;
+        margin: 0;
+        font-size: 12px;
+        border: none;
+        color: #707070;
+        text-transform: uppercase;
+    }
+}

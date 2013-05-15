@@ -1,12 +1,14 @@
 //
-//
+// Sliders
 //
 
+// Overwriting default bootstrap carousel 
+//
 #main-slider-wrapper {
     padding-bottom: 53px;
 
     #main-slider {
-        background: url(/static/imgs/bg_slider_top.gif) repeat-x left top;
+        background: ~"url(@{static-url-prefix}imgs/bg_slider_top.gif)" repeat-x left top;
         padding-top: 35px;
 
         .carousel-inner {
@@ -116,7 +118,7 @@
             .active:not(:first-child) {
                 position: relative;
                 background-color: #006699;
-                color: #fff;
+                color: @white;
 
                 &:after{
                     position: absolute;
@@ -133,6 +135,8 @@
     }
 }
 
+// Overwriting default bootstrap carousel 
+//
 .content-cycle {
     header {
         h2 {
@@ -153,18 +157,20 @@
         height: 270px;
 
         .carousel-inner {
+            @carouselInnerWidth: 600px;
+
             float: left;
-            width: 615px;
+            width: @carouselInnerWidth;
             margin-left: 5px;
-            background: url(/static/imgs/bg_highlight.gif) repeat-x center 40px;
+            background: ~"url(@{static-url-prefix}imgs/bg_highlight.gif)" repeat-x center 40px;
 
             .item {
-                width: 615px;
+                width: @carouselInnerWidth;
                 height: 270px;
 
                 .group-item {
                     float: left;
-                    width: (615/3) - 20px;
+                    width: (@carouselInnerWidth/3) - 20;
                     padding: 0 10px;
 
                     .category {
@@ -178,7 +184,7 @@
                         background: #666666;
                         text-align: right;
                         text-transform: uppercase;
-                        color: #fff;
+                        color: @white;
                         z-index: 9;
                     }
 
@@ -222,9 +228,10 @@
             border-right: 16px solid #d9d9d9;
 
             &.right {
-                float: right;
+                float: left;
                 left: auto;
-                right: 0;
+                right: auto;
+                margin-left: 5px;
                 border-top: 26px solid transparent;
                 border-bottom: 27px solid transparent;
                 border-right: none;
@@ -233,3 +240,65 @@
         }
     }
 }
+
+// jCarousel
+//
+.magazine-jcarousel-wrapper {
+    @carouselWidth: 870px;
+    @carouselInnerWidth: 740px;
+
+    width: @carouselWidth;
+    padding: 60px ((@carouselWidth - @carouselInnerWidth)/2) 10px;
+    margin-bottom: 20px;
+    background: ~"url(@{static-url-prefix}imgs/bg_footer.jpg)" no-repeat center top;
+
+    .jcarousel {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+        width: @carouselInnerWidth;
+        background: ~"url(@{static-url-prefix}imgs/vertical_dots.gif)" repeat-y right top;
+
+        ul {
+            position: absolute;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            @paddingSides: 20px;
+
+            float: left;
+            width: ((@carouselInnerWidth/9)-@paddingSides);
+            height: 100px;
+            padding: 14px @paddingSides/2;
+            background: ~"url(@{static-url-prefix}imgs/vertical_dots.gif)" repeat-y left top;
+
+            img {
+                border: 1px solid #29221a;
+            }
+        }
+    }
+
+    .left, 
+    .right {
+        float: left;
+        width: 33px;
+        height: 59px;
+        margin: 25px 30px 0 0;
+        font-size: 14px;
+        line-height: 30px;
+        background: ~"url(@{static-url-prefix}imgs/magazine_slider_arrows.gif)" no-repeat left top;
+    }
+    
+    .right {
+        float: right;
+        left: auto;
+        right: 0;
+        margin: 25px 0 0 0;
+        background-position: right top;
+    }
+}
+
